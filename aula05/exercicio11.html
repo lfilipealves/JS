@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RNE</title>
+  </head>
+
+  <body>
+    <h1>Sistemas de Estrangeiros</h1>
+    Nacionalidade: <input type="text" name="txtnac" id="txtnac" />
+    <input type="button" value="Verificar" onclick="comparar()" />
+
+    <div id="res"></div>
+
+    <script>
+      function comparar() {
+        var txtnacio = window.document.getElementById("txtnac");
+        var res = window.document.getElementById("res");
+        var nacionalidade = String(txtnac.value);
+        res.innerHTML = `Você nasceu no(a) ${nacionalidade}`;
+        if (nacionalidade == "Brasil") {
+          res.innerHTML = "<p> Você é brasileiro!! </p>";
+        } else {
+          res.innerHTML = "<p> Você é estrangeiro!!! </p>";
+        }
+      }
+    </script>
+  </body>
+</html>
